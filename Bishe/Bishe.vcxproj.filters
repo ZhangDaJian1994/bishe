@@ -27,9 +27,30 @@
     <ClCompile Include="generateIrram.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Converter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="floatdemo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MyFloat.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="program1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="const.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFloat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="program3.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

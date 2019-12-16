@@ -8,4 +8,6 @@ void init(MyFloat* arrNLoop);
 
 bool fileExist(std::string filePath);
 
-void intervalMerge(ResultList<MyFloat*> resultList);
+void intervalMerge(RESULT_LIST resultList);
+
+void writeFile(struct ResultList resultList);

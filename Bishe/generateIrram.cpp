@@ -18,7 +18,7 @@ void generateFloatCpp(std::string stringInstruction) {
 	ofile << "x=atof(argv[1]);                      " << std::endl;
 	ofile << "y=atof(argv[2]);                      " << std::endl;
 	ofile << "}                                     " << std::endl;
-	ofile << "res=" + stringInstruction + ";" << std::endl;
+	ofile << "res=" + stringInstruction + ";"         << std::endl;
 	ofile << "std::ofstream ofile;                  " << std::endl;
 	ofile << "ofile.open(\"d:\\\\floatOut.txt\");   " << std::endl;
 	ofile << "ofile << res << \"\\n\";           " << std::endl;

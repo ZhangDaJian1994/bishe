@@ -7,7 +7,7 @@
 #include "iRRAM/lib.h"
 #include <sys/stat.h>
 #include "generateIrram.h"
-using namespace iRRAM;
+//using namespace iRRAM;
 
 unsigned char buffer[4] = { 0xff,0xff,0xff,0xff };
 MyFloatPtr FLOAT_MAX = new MyFloat(true, 127, buffer, MANTISSA_SIZE);
@@ -36,7 +36,7 @@ struct Result
 	// 浮点值 = N维空间的某小区间对应的浮点值
 	// error 表示将这个浮点值带入irram实数程序 减去 这个浮点值带入浮点程序     // 的差值
 	// error = irram程序（浮点值）- 浮点程序（浮点值）；
-	REAL error;
+	iRRAM::REAL error;
 
 	/*
 	Result(int n) {
@@ -63,6 +63,9 @@ MyFloatPtr arrNLoop;
 
 // 声明结果集
 std::list<Result> resultList;
+
+// 声明上一个Result，用于区间合并
+Result *preResult;
 
 // 声明维度
 int dimension = 10;

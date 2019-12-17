@@ -63,21 +63,31 @@ void cycle(int localDim, Result& result)
 		{
 			result.mid[2 * (dimension - 1)] = leftMiddleVal;
 			result.mid[2 * (dimension - 1) + 1] = rightMiddleVal;
-			// 加入结果集
+			// 计算误差
+			calcError(result);
+
+			// TODO 如何合并不同维度的误差
+			if (result.error == preResult->error)	// 误差一致，合并
+			{
+				// 左值更新，右值不变
+				result.mid[2 * (dimension - 1)] = preResult->mid[2 * (dimension - 1)];
+				// 删除集合中的preResult
+				resultList.pop_back();
+			}
+			// (合并后的result)加入结果集
 			resultList.push_back(result);
+			// 赋值新的preResult
+			preResult = &result;
 		}
 		else
 		{
 			int curDim = dimension - localDim;
 			result.mid[2 * curDim] = leftMiddleVal;
 			result.mid[2 * curDim + 1] = rightMiddleVal;
-			// 计算误差
-			calcError(result);
 			// 递归
 			cycle(localDim - 1, result);
 		}
 	}
-
 }
 /*
 // TODO 考虑通过递归实现动态N重循环

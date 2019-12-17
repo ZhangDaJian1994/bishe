@@ -25,8 +25,6 @@ void generateFloatCpp(std::string stringInstruction) {
 	ofile << "ofile.close();                        " << std::endl;
 	ofile << "}                                     " << std::endl;
 	ofile.close();
-	/////////////////////////////////
-	
 	std::cout << " 请输入参数" << std::endl;
 	std::string argv;
 	std::getline(std::cin, argv);
@@ -74,7 +72,6 @@ void generateIrramCpp(std::string stringInstruction) {
 	ofile << "return 0;                                                                         " << std::endl;
 	ofile << "}                                                                                 " << std::endl;
 	ofile.close();
-	///////////////////////////////////
 	//system("g++ d:\\testReal.cpp -c -o d:\\testReal.o -I d:\\project\\irramlib\\include\\");
 	//system("g++ -o d:\\testReal.exe d:\\testReal.o d:\\project\\irramlib\\lib\\libiRRAM.a d:\\project\\irramlib\\lib\\libmpfr.a d:\\project\\irramlib\\lib\\libgmp.a");
 	std::cout << " 请输入参数" << std::endl;

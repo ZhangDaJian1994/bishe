@@ -65,9 +65,8 @@ void MyFloat::mantissaUp(bool sign)
 	}
 }
 
-bool MyFloat::equals(MyFloat* other)
+bool MyFloat::equals(MyFloat *other)
 {
-
 	return (this->bSign == other->bSign) 
 		&& (this->cExponent == other->cExponent)
 		&& (this->ulMantissa == other->ulMantissa)
@@ -79,7 +78,7 @@ bool MyFloat::isFloatMax()
 	return this->equals(FLOAT_MAX);
 }
 
-MyFloat MyFloat::setToOne(unsigned char * mantissa, int type)
+MyFloat MyFloat::setToOne(unsigned char *mantissa, int type)
 {
 	if (type == 1) {
 		unsigned char one[4] = { 0xff,0xff,0xff,0xff };
@@ -92,7 +91,7 @@ MyFloat MyFloat::setToOne(unsigned char * mantissa, int type)
 	return MyFloat();
 }
 
-int MyFloat::countOne(unsigned char * mantissa)
+int MyFloat::countOne(unsigned char *mantissa)
 {
 	int count = 0;
 	int index = 0;

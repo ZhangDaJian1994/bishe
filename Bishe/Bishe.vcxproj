@@ -129,9 +129,13 @@
   <ItemGroup>
     <ClInclude Include="const.h" />
     <ClInclude Include="Converter.h" />
+    <ClInclude Include="generateIrram.h" />
     <ClInclude Include="MyFloat.h" />
     <ClInclude Include="program1.h" />
     <ClInclude Include="program3.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

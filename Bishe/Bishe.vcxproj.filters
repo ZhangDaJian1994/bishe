@@ -53,5 +53,13 @@
     <ClInclude Include="program3.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="generateIrram.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources.txt">
+      <Filter>资源文件</Filter>
+    </Text>
   </ItemGroup>
 </Project>
